@@ -5,8 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Allan Souza Araujo</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hamburguer-menu input[type="checkbox"]:checked ~ .sidebar {
+      transform: translateX(0);
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #333;
+      color: white;
+      transition: transform 0.3s ease-in-out;
+      padding-top: 60px;
+    }
+    .sidebar a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+    .hamburguer-menu input[type="checkbox"] {
+      display: none;
+    }
+    .hamburguer-menu label {
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    .hamburguer-menu label div {
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 6px 0;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
+  <!-- Menu Hambúrguer -->
+  <div class="hamburguer-menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </div>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <!-- Header -->
   <header class="bg-blue-500 text-white p-4">
     <div class="container mx-auto flex justify-between items-center">
@@ -30,10 +96,10 @@
   <section id="about" class="py-20 bg-gray-100">
     <div class="container mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
-<p class="text-lg text-left">Sou Allan Souza Araujo, tenho 28 anos e sou movido por desafios e aprendizado contínuo.</p>
-<p class="text-lg text-left">Com grande experiência em gestão de projetos, processos e análise de dados, além de atendimento ao cliente e suporte jurídico, atuo como Analista Administrativo Pleno, aplicando metodologias como Six Sigma e Lean para otimizar processos e gerar indicadores de desempenho.</p>
-<p class="text-lg text-left">Fui responsável pelo sucesso de um MVP de energia limpa, com captação de clientes e parcerias estratégicas, e atualmente estou atuando com aprimoramento de um aplicativo para gestão de condomínios e administradoras.</p>
-<p class="text-lg text-left">Estou cursando Análise e Desenvolvimento de Sistemas, com o objetivo de seguir minha carreira na área de TI, aproveitando minha sólida experiência em projetos e melhorias de processos para impulsionar minha atuação no setor.</p>
+      <p class="text-lg text-left">Sou Allan Souza Araujo, tenho 28 anos e sou movido por desafios e aprendizado contínuo.</p>
+      <p class="text-lg text-left">Com grande experiência em gestão de projetos, processos e análise de dados, além de atendimento ao cliente e suporte jurídico, atuo como Analista Administrativo Pleno, aplicando metodologias como Six Sigma e Lean para otimizar processos e gerar indicadores de desempenho.</p>
+      <p class="text-lg text-left">Fui responsável pelo sucesso de um MVP de energia limpa, com captação de clientes e parcerias estratégicas, e atualmente estou atuando com aprimoramento de um aplicativo para gestão de condomínios e administradoras.</p>
+      <p class="text-lg text-left">Estou cursando Análise e Desenvolvimento de Sistemas, com o objetivo de seguir minha carreira na área de TI, aproveitando minha sólida experiência em projetos e melhorias de processos para impulsionar minha atuação no setor.</p>
     </div>
   </section>
 
