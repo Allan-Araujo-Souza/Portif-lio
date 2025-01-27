@@ -1,117 +1,103 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import "./tailwind.output.css";
-
-const App = () => {
-  return (
-    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      {/* Header */}
-      <header className="p-4 bg-white dark:bg-gray-800 shadow-md">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold">Allanzoka Portfolio</h1>
-          <nav>
-            <ul className="flex space-x-4">
-              <li><a href="#about" className="hover:text-blue-500">About</a></li>
-              <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
-              <li><a href="#education" className="hover:text-blue-500">Education</a></li>
-              <li><a href="#tools" className="hover:text-blue-500">Tools</a></li>
-              <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <motion.section
-        className="hero bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-20"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <h2 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
-        <p className="text-xl">Showcasing my projects and skills as a developer.</p>
-      </motion.section>
-
-      {/* About Section */}
-      <section id="about" className="py-20 container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
-        <p className="text-center max-w-3xl mx-auto">
-          Hi! I’m Allanzoka, a passionate developer with experience in creating innovative solutions and optimizing processes. Let’s build the future together!
-        </p>
-      </section>
-
-      {/* Experiences Section */}
-      <section id="experience" className="py-20 bg-gray-200 dark:bg-gray-800">
-        <h2 className="text-3xl font-bold text-center mb-8">Experience</h2>
-        <div className="container mx-auto">
-          <ul className="space-y-4">
-            <li><strong>Cogna</strong><br />Assistente Administrativo de BackOffice (Mar/2019 - Set/2021)</li>
-            <li><strong>Cogna</strong><br />Assistente Administrativo Jurídico (Set/2021 - Out/2022)</li>
-            <li><strong>Superlógica</strong><br />Analista de BackOffice – Projeto Energia Limpa (Out/2022 - Fev/2024)</li>
-            <li><strong>Superlógica</strong><br />Analista de Suporte – Projeto Aplicativo Gruvi (Mar/2024 - Atual)</li>
-          </ul>
-        </div>
-      </section>
-
-      {/* Education Section */}
-      <section id="education" className="py-20 container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Education</h2>
-        <ul className="space-y-4 text-center">
-          <li>Ensino Médio Completo</li>
-          <li>Tecnólogo em Processos Gerenciais (Concluído em 2022)</li>
-          <li>Análise e Desenvolvimento de Sistemas (Iniciado em Jun/2024, em andamento)</li>
-        </ul>
-      </section>
-
-      {/* Tools Section */}
-      <section id="tools" className="py-20 bg-gray-200 dark:bg-gray-800">
-        <h2 className="text-3xl font-bold text-center mb-8">Tools & Skills</h2>
-        <div className="text-center">
-          <p>HTML, CSS, JavaScript, Python, Java, VS Code, Teamwork, Problem Solving</p>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-20">
-        <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
-        <form className="max-w-lg mx-auto bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg">
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-bold mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-bold mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block text-sm font-bold mb-2">Message</label>
-            <textarea
-              id="message"
-              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
-              rows="5"
-            ></textarea>
-          </div>
-          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">
-            Send Message
-          </Button>
-        </form>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white text-center py-4">
-        <p>&copy; 2025 Allanzoka. All rights reserved.</p>
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allanzoka Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Allanzoka Portfolio</h1>
+      <nav>
+        <a href="#about" class="mr-4 hover:underline">About</a>
+        <a href="#experience" class="mr-4 hover:underline">Experience</a>
+        <a href="#education" class="mr-4 hover:underline">Education</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
     </div>
-  );
-};
+  </header>
 
-export default App;
+  <!-- Hero Section -->
+  <section class="bg-white text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+    <p class="text-lg">Showcasing my projects and skills as a developer.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg">Hi! I’m Allanzoka, a passionate developer with experience in creating innovative solutions and optimizing processes. Let’s build the future together!</p>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-20 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Experience</h2>
+      <ul class="space-y-4">
+        <li>
+          <h3 class="text-xl font-bold">Cogna</h3>
+          <p>Assistente Administrativo de BackOffice (Mar/2019 - Set/2021)</p>
+          <p>Assistente Administrativo Jurídico (Set/2021 - Out/2022)</p>
+        </li>
+        <li>
+          <h3 class="text-xl font-bold">Superlógica</h3>
+          <p>Analista de BackOffice – Projeto Energia Limpa (Out/2022 - Fev/2024)</p>
+          <p>Analista de Suporte – Projeto Aplicativo Gruvi (Mar/2024 - Atual)</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Education</h2>
+      <ul class="space-y-4">
+        <li>Ensino Médio Completo</li>
+        <li>Tecnólogo em Processos Gerenciais (Concluído em 2022)</li>
+        <li>Análise e Desenvolvimento de Sistemas (Iniciado em Jun/2024, em andamento)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tools Section -->
+  <section id="tools" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Tools & Skills</h2>
+      <p class="text-lg">HTML, CSS, JavaScript, Python, Java, VS Code, Teamwork, Problem Solving</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
+      <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <div class="mb-4">
+          <label for="name" class="block font-bold mb-2">Name</label>
+          <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block font-bold mb-2">Email</label>
+          <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block font-bold mb-2">Message</label>
+          <textarea id="message" class="w-full border border-gray-300 p-2 rounded"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-500 text-white p-4 text-center">
+    © 2025 Allanzoka. All rights reserved.
+  </footer>
+</body>
+</html>
