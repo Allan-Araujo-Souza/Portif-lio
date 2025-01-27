@@ -231,4 +231,104 @@
       border-radius: 4px;
       font-size: 16px;
     }
-    .form-contato butto
+    .form-contato button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px 0px 5px 0px;
+      background-color: #000000;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .form-contato button:hover {
+      box-shadow: 0px 5px 15px 0px #000000;
+    }
+    .classemail {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5rem;
+    }
+    .classemail a {
+      color: #000000;
+    }
+    .bx {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Meu Portfolio</h1>
+      <nav>
+        <a href="#about" class="mr-4 hover:underline">About</a>
+        <a href="#experience" class="mr-4 hover:underline">Experience</a>
+        <a href="#education" class="mr-4 hover:underline">Education</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-white text-center py-20">
+    <h2 class="text-4xl font-bold mb-4">Allan Souza Araujo</h2>
+    <p class="text-lg">Profissional de Projetos e Processos em TI</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
+      <p class="text-lg text-left">Sou Allan Souza Araujo, tenho 28 anos e sou movido por desafios e aprendizado contínuo.</p>
+      <p class="text-lg text-left">Com grande experiência em gestão de projetos, processos e análise de dados, além de atendimento ao cliente e suporte jurídico, atuo como Analista Administrativo Pleno, aplicando metodologias como Six Sigma e Lean para otimizar processos e gerar resultados. Busco sempre a excelência em todas as minhas entregas.</p>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="experience" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Experiência Profissional</h2>
+      <div class="main-container">
+        <div class="text-wrapper left">
+          <div class="content">
+            <h3>2022 - Atual</h3>
+            <a href="#" class="hover:underline">Superlógica Tecnologias</a>
+            <p>Atuo como Analista Administrativo Pleno, realizando prospecção de clientes e acompanhando indicadores de desempenho.</p>
+          </div>
+        </div>
+        <div class="text-wrapper right">
+          <div class="content">
+            <h3>2020 - 2022</h3>
+            <a href="#" class="hover:underline">Empresa X</a>
+            <p>Gestão de processos e projetos, com foco em melhorias contínuas e aumento de eficiência.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center gap-12">
+        <div class="contatoinfo">
+          <h2 class="text-3xl font-bold">Fale Comigo</h2>
+          <p class="mt-4">Estou sempre disponível para conversar sobre novos projetos, oportunidades ou qualquer dúvida que você possa ter!</p>
+        </div>
+        <div class="form-contato">
+          <h2 class="text-2xl font-semibold">Entre em Contato</h2>
+          <form action="#" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
