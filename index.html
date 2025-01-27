@@ -1,334 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allan Souza Araujo</title>
+  <title>Allan Souza Araujo - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Container */
-    .Container {
-      padding: 4rem 0px;
-    }
-    .Container article {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-    .SessaoPrincipal {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .ImgPrincipal {
-      object-fit: cover;
-      border-radius: 40px;
-      width: 23rem;
-    }
-    .Container h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      font-style: normal;
-    }
-    .Arrow {
-      width: 25px;
-      position: relative;
-      animation: mymove .9s infinite;
-    }
-    @keyframes mymove {
-      from {top: 2px;}
-      to {top: 16px;}
-    }
-
-    /* Linha do Tempo */
-    .containerSegundo {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      padding: 2rem 0px;
-    }
-    .main-container {
-      position: relative;
-      width: 500px;
-    }
-    .main-container::after {
-      content: '';
-      position: absolute;
-      width: 10px;
-      background-color: rgb(96, 93, 93);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-    .text-wrapper {
-      padding: 10px 40px;
-      position: relative;
-      width: 51%;
-      box-sizing: border-box;
-      margin: 50px 0;
-    }
-    .text-wrapper::after {
-      content: '';
-      position: absolute;
-      width: 30px;
-      height: 25px;
-      right: -10px;
-      background-color: #000000;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .left {
-      left: 0;
-    }
-    .right {
-      left: 50%;
-    }
-    .right::after {
-      left: -10px;
-    }
-    .content {
-      padding: 15px 15px 15px 17px;
-      background-color: #000000;
-      border-radius: 4px;
-    }
-    .content h3 {
-      text-transform: uppercase;
-      font-size: 14px;
-      color: #ffffff;
-      letter-spacing: 1px;
-    }
-    .content a {
-      color: #f4f4f4e7;
-      font-weight: 300;
-      font-size: 18px;
-      margin-top: 2px;
-      transition: all .5ms;
-    }
-    .content a:hover {
-      color: #ffffff;
-    }
-
-    /* Currículo */
-    .containercurriculo {
-      width: 100%;
-      background: #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 3rem 0px;
-    }
-    .curriculo {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 70%;
-    }
-    .TextoCurriculo legend {
-      color: #ffffff;
-      font-size: 1.1rem;
-    }
-    .btncurriculo a {
-      background: #ffffff;
-      padding: .3rem 1rem;
-      color: #000000;
-      font-weight: 700;
-      border-radius: 5px 0px 5px 0px;
-    }
-    .btncurriculo a:hover {
-      box-shadow: 0px 5px 15px 0px #fff;
-    }
-
-    /* Projetos */
-    .containerProjetos {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      align-items: center;
-    }
-    .Projetos {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 80%;
-      padding: 3rem 0px;
-      gap: 1.5rem;
-    }
-    .ImgProjetos {
-      width: 30rem;
-      border-radius: 10px;
-    }
-    .TextoApresentassaoProjeto p {
-      font-size: .9rem;
-      font-weight: 700;
-    }
-    .projetosbtn a {
-      background: linear-gradient(45deg, #CB6CE6, #FC6AED);
-      padding: .5rem 1rem;
-      border-radius: 5px 0px 5px 0px;
-      color: #000000;
-      font-size: .8rem;
-      font-weight: 800;
-    }
-    .projetosbtn a:hover {
-      box-shadow: 0px 5px 15px 0px #000000;
-    }
-
-    /* Contato */
-    .ContainerContato {
-      padding: 5rem 0px;
-      display: flex;
-      justify-content: center;
-      gap: 10rem;
-    }
-    .contatoinfo {
-      color: #000000;
-      padding: 2rem;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    .container {
-      box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.1);
-      width: 50%;
-      display: flex;
-      background-color: #fff;
-      justify-content: center;
-      border-radius: 8px 8px 8px 8px;
-    }
-    .sessaoinfo {
-      display: flex;
-      flex-direction: column;
-      gap: .3rem;
-      align-items: baseline;
-    }
-    .form-contato {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      width: 100%;
-      max-width: 400px;
-    }
-    .form-contato h2 {
-      margin-bottom: 20px;
-      text-align: center;
+    /* Custom styles */
+    body {
+      font-family: 'Arial', sans-serif;
       color: #333;
     }
-    .form-contato label {
-      margin-bottom: 5px;
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
       color: #555;
     }
-    .form-contato input {
-      margin-bottom: 15px;
-      padding: 10px;
-      border: 1px solid #ccc;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .hero {
+      background-color: #4f46e5;
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+    }
+
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      max-width: 900px;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-item-content {
+      background-color: #f4f4f4;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      width: 45%;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.5rem;
+      color: #333;
+    }
+
+    .timeline-item p {
+      color: #777;
+    }
+
+    .cta-btn {
+      background-color: #6a64f1;
+      padding: 0.5rem 1.5rem;
+      color: white;
       border-radius: 4px;
-      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
     }
-    .form-contato button {
-      padding: 10px;
-      border: none;
-      border-radius: 5px 0px 5px 0px;
-      background-color: #000000;
-      color: #fff;
-      font-size: 16px;
-      cursor: pointer;
+
+    .cta-btn:hover {
+      background-color: #4f46e5;
     }
-    .form-contato button:hover {
-      box-shadow: 0px 5px 15px 0px #000000;
+
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
-    .classemail {
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact form */
+    .form-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: .5rem;
+      margin-top: 4rem;
     }
-    .classemail a {
-      color: #000000;
+
+    .form-container form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
     }
-    .bx {
-      font-size: 1.5rem;
+
+    .form-container input,
+    .form-container textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .form-container button {
+      background-color: #6a64f1;
+      color: white;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .form-container button:hover {
+      background-color: #4f46e5;
     }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
-  <!-- Header -->
-  <header class="bg-blue-500 text-white p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Meu Portfolio</h1>
-      <nav>
-        <a href="#about" class="mr-4 hover:underline">About</a>
-        <a href="#experience" class="mr-4 hover:underline">Experience</a>
-        <a href="#education" class="mr-4 hover:underline">Education</a>
-        <a href="#contact" class="hover:underline">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body>
 
   <!-- Hero Section -->
-  <section class="bg-white text-center py-20">
-    <h2 class="text-4xl font-bold mb-4">Allan Souza Araujo</h2>
-    <p class="text-lg">Profissional de Projetos e Processos em TI</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Allan Souza Araujo</h1>
+      <p class="text-xl">Profissional de Projetos e Processos em TI</p>
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-20 bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Sobre Mim</h2>
-      <p class="text-lg text-left">Sou Allan Souza Araujo, tenho 28 anos e sou movido por desafios e aprendizado contínuo.</p>
-      <p class="text-lg text-left">Com grande experiência em gestão de projetos, processos e análise de dados, além de atendimento ao cliente e suporte jurídico, atuo como Analista Administrativo Pleno, aplicando metodologias como Six Sigma e Lean para otimizar processos e gerar resultados. Busco sempre a excelência em todas as minhas entregas.</p>
-    </div>
+  <section class="container py-12" id="about">
+    <h2 class="section-title">Sobre Mim</h2>
+    <p class="section-subtitle">Sou Allan Souza Araujo, tenho 28 anos e sou movido por desafios e aprendizado contínuo. Com grande experiência em gestão de projetos, processos e análise de dados, atuo como Analista Administrativo Pleno, utilizando metodologias como Six Sigma e Lean para otimizar processos e gerar resultados.</p>
   </section>
 
   <!-- Timeline Section -->
-  <section id="experience" class="py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Experiência Profissional</h2>
-      <div class="main-container">
-        <div class="text-wrapper left">
-          <div class="content">
-            <h3>2022 - Atual</h3>
-            <a href="#" class="hover:underline">Superlógica Tecnologias</a>
-            <p>Atuo como Analista Administrativo Pleno, realizando prospecção de clientes e acompanhando indicadores de desempenho.</p>
-          </div>
-        </div>
-        <div class="text-wrapper right">
-          <div class="content">
-            <h3>2020 - 2022</h3>
-            <a href="#" class="hover:underline">Empresa X</a>
-            <p>Gestão de processos e projetos, com foco em melhorias contínuas e aumento de eficiência.</p>
-          </div>
-        </div>
+  <section class="timeline-container">
+    <h2 class="section-title">Experiência Profissional</h2>
+    
+    <div class="timeline-item">
+      <div class="timeline-item-content">
+        <h3>2022 - Atual</h3>
+        <p><strong>Superlógica Tecnologias</strong></p>
+        <p>Atuo como Analista Administrativo Pleno, realizando prospecção de clientes e acompanhando indicadores de desempenho.</p>
+      </div>
+      <div class="timeline-item-content">
+        <h3>2020 - 2022</h3>
+        <p><strong>Empresa X</strong></p>
+        <p>Gestão de processos e projetos, com foco em melhorias contínuas e aumento de eficiência.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="container py-12" id="projects">
+    <h2 class="section-title">Projetos</h2>
+    <p class="section-subtitle">Veja alguns dos meus projetos recentes:</p>
+    <div class="flex justify-center gap-8">
+      <div class="w-1/3">
+        <img src="project1.jpg" alt="Projeto 1" class="rounded-lg shadow-lg">
+        <p class="text-center mt-4">Projeto 1</p>
+      </div>
+      <div class="w-1/3">
+        <img src="project2.jpg" alt="Projeto 2" class="rounded-lg shadow-lg">
+        <p class="text-center mt-4">Projeto 2</p>
+      </div>
+      <div class="w-1/3">
+        <img src="project3.jpg" alt="Projeto 3" class="rounded-lg shadow-lg">
+        <p class="text-center mt-4">Projeto 3</p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-100">
-    <div class="container mx-auto">
-      <div class="flex justify-between items-center gap-12">
-        <div class="contatoinfo">
-          <h2 class="text-3xl font-bold">Fale Comigo</h2>
-          <p class="mt-4">Estou sempre disponível para conversar sobre novos projetos, oportunidades ou qualquer dúvida que você possa ter!</p>
-        </div>
-        <div class="form-contato">
-          <h2 class="text-2xl font-semibold">Entre em Contato</h2>
-          <form action="#" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-        </div>
-      </div>
+  <section id="contact" class="container py-12">
+    <h2 class="section-title">Fale Comigo</h2>
+    <p class="section-subtitle">Estou disponível para novos projetos e parcerias. Entre em contato!</p>
+    
+    <div class="form-container">
+      <form action="#">
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" rows="4" placeholder="Sua mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
     </div>
   </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>&copy; 2025 Allan Souza Araujo. Todos os direitos reservados.</p>
+    <p>
+      <a href="mailto:allanzoka@example.com">allanzoka@example.com</a>
+    </p>
+  </footer>
+
 </body>
 </html>
