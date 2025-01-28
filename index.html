@@ -115,7 +115,7 @@
 
 <!-- Contato Section -->
 <section id="Contato" class="py-20">
-  <div class="container mx-auto flex">
+  <div class="container mx-auto flex flex-wrap">
     <!-- Formulário de Contato -->
     <div class="w-full md:w-2/3">
       <h2 class="text-3xl font-bold mb-4 text-center text-purple-400">Entre em Contato</h2>
@@ -156,6 +156,21 @@
     </div>
   </div>
 </section>
+
+<style>
+  /* Ajusta o layout para telas pequenas */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Faz com que os itens fiquem empilhados */
+    }
+    .w-full.md\:w-2\/3 {
+      margin-bottom: 20px; /* Adiciona espaçamento entre o formulário e as redes sociais */
+    }
+    .ml-10 {
+      margin-left: 0; /* Remove a margem esquerda nas telas pequenas */
+    }
+  }
+</style>
 
 
   <!-- Footer -->
